@@ -15,4 +15,6 @@ apt install -y snmp
 sleep 3
 apt install -y snmp-mibs-downloader
 sleep 3
-
+mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.old
+cp ./snmpd.conf /etc/snmp/
+service snmpd restart
